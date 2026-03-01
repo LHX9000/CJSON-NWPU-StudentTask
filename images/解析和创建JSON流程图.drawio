@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.0">
+  <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
+    <mxGraphModel dx="969" dy="1087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;cJSON_Parse(json_string)(简易接口)&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="159.5" y="120" as="sourcePoint" />
+            <mxPoint x="159.5" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;cJSON_ParseWithLengthOpts(json_string, length, return_parse_end, require_null_terminated)(底层实现)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="37" y="159" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="238" as="sourcePoint" />
+            <mxPoint x="160" y="278" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;初始化 parse_buffer&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="161" y="358" as="sourcePoint" />
+            <mxPoint x="161" y="398" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;创建根节点 item (调用cJSON_New_item())&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="233" x="41.75" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;给 parse_buffer传输json字符串及状态&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;buffer.content = json_string&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;buffer.length = buffer_length(预设长度)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;buffer.offset = 0(初始化解析位置，从头解析)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="316.5" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;跳过 UTF-8 BOM 和空白字符&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="241.5" x="38.5" y="681" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-24" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-16" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wzKigs_dPXLtUqFB1igJ-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="610" as="sourcePoint" />
+            <mxPoint x="430" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-25" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-13" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="wzKigs_dPXLtUqFB1igJ-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="750" as="sourcePoint" />
+            <mxPoint x="430" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;调用parse_value()&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;判断当前字符类型&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="241.5" x="39" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-28" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-23" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="wzKigs_dPXLtUqFB1igJ-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="380" y="1040" as="sourcePoint" />
+            <mxPoint x="430" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-30" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-27" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="870" as="sourcePoint" />
+            <mxPoint x="320" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-31" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="wzKigs_dPXLtUqFB1igJ-56" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="319" y="800.5000000000002" as="sourcePoint" />
+            <mxPoint x="319" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-32" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;null&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="160" x="320" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-38" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;false&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="320" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;设置 type = cJSON_NULL，offset += 4&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="79" width="320" x="480" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;设置 type = cJSON_False，offset += 5&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="79" width="320" x="480" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-41" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;true&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="316.5" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;设置 type = cJSON_True，valueint = 1,(方便判断)offset += 4&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="79" width="320" x="476.5" y="1001" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-43" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;string(识别&#39;/&quot;&#39;)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="320" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;调用parse_string()&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="75" width="160" x="480" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-45" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-44" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="681" y="1180" as="sourcePoint" />
+            <mxPoint x="680" y="1160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-46" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1120" as="sourcePoint" />
+            <mxPoint x="800" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-47" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1360" as="sourcePoint" />
+            <mxPoint x="680" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;分配内存存储字符串&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-50" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1200" as="sourcePoint" />
+            <mxPoint x="800" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;处理转义字符&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1182" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-52" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1280" as="sourcePoint" />
+            <mxPoint x="800" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;设置 type = cJSON_String&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-54" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1360" as="sourcePoint" />
+            <mxPoint x="800" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-55" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;设置valuestring = output = 字符串&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="35" width="263.5" x="796.5" y="1338" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-56" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;number(识别&#39;-&#39;和数字)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="160" x="316.5" y="1416" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-57" edge="1" parent="1" source="wzKigs_dPXLtUqFB1igJ-63" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="681" y="1477" as="sourcePoint" />
+            <mxPoint x="680" y="1457" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-58" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1417" as="sourcePoint" />
+            <mxPoint x="800" y="1417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-59" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1657" as="sourcePoint" />
+            <mxPoint x="680" y="1417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-60" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1497" as="sourcePoint" />
+            <mxPoint x="800" y="1497" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-61" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1577" as="sourcePoint" />
+            <mxPoint x="800" y="1577" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-62" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="1657" as="sourcePoint" />
+            <mxPoint x="800" y="1657" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;调用parse_number()&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="75" width="160" x="480" y="1417" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;提取数字字符串&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1397" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-65" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;使用 strtod() 转换为 double&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1479" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;设置 valuedouble 和 valueint&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="800" y="1557" as="geometry" />
+        </mxCell>
+        <mxCell id="wzKigs_dPXLtUqFB1igJ-67" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;设置 type = cJSON_Number&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="263.5" x="796.5" y="1635" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
